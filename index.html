@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T983QJP3Z3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-T983QJP3Z3');
+    </script>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tile Match - Ultimate Tile Matching Puzzle Game | Match & Solve</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Match: Fast-Paced Puzzle Game | Brain Training Matching Game</title>
+    <meta name="description" content="Tile Match: An addictive online puzzle game that challenges your pattern recognition and cognitive skills. Play now and compete globally!">
+    <meta name="keywords" content="tile match, puzzle game, brain training, pattern recognition, online matching game, cognitive challenge">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://tilematch.online">
-    <meta name="description" content="Tile Match: The ultimate online tile matching puzzle game. Challenge your brain with fast-paced levels, global multiplayer, and addictive gameplay. Play Tile Match now!">
-    <meta name="keywords" content="tile match, tile matching game, online puzzle game, brain teaser, multiplayer matching game">
     <style>
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link:hover {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #2563eb;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
         .game-container {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; 
+            padding-top: 56.25%; /* 16:9 aspect ratio */
         }
         .game-container iframe {
             position: absolute;
@@ -23,90 +57,109 @@
         }
         @media (max-width: 768px) {
             .game-container {
-                padding-top: 100%; 
+                padding-top: 100%; /* More square for mobile */
             }
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-blue-100 text-gray-800 font-sans">
-    <div class="container mx-auto px-4 py-8 max-w-6xl">
+<body class="smooth-scroll bg-gradient-to-br from-blue-50 to-blue-100 text-gray-800 font-sans">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Tile Match</a>
+            <div class="space-x-4">
+                <a href="#game" class="nav-link text-gray-700">Play Game</a>
+                <a href="#overview" class="nav-link text-gray-700">About</a>
+                <a href="#how-to-play" class="nav-link text-gray-700">How to Play</a>
+                <a href="#science" class="nav-link text-gray-700">The Science</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 pt-20 max-w-6xl">
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4 drop-shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
                 Tile Match
             </h1>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                The Ultimate Tile Matching Challenge: Where Speed Meets Strategy!
+                Where Cognitive Speed Meets Strategic Matching
             </p>
         </header>
 
         <main>
-            <section class="bg-white rounded-xl shadow-2xl overflow-hidden mb-12">
+            <section id="game" class="bg-white rounded-xl shadow-2xl overflow-hidden mb-12">
                 <div class="game-container">
                     <iframe 
                         src="https://cloud.onlinegames.io/games/2025/unity/tile-match/index-og.html" 
                         frameborder="0" 
                         allowfullscreen
+                        title="Tile Match Game"
                     ></iframe>
                 </div>
             </section>
 
-            <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <section id="overview" class="grid md:grid-cols-2 gap-8 mb-12">
                 <div>
-                    <h2 class="text-3xl font-semibold text-blue-500 mb-4">Tile Match: Game Overview</h2>
+                    <h2 class="text-3xl font-semibold text-blue-500 mb-4">Game Overview</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">
-                        Tile Match is a cutting-edge tile matching puzzle game that transforms pattern recognition into an adrenaline-pumping challenge. Players dive into a world where quick reflexes and strategic thinking collide, navigating through intricate tile layouts that test cognitive skills and reaction times.
+                        Tile Match is a cutting-edge puzzle game that transforms pattern recognition into an electrifying challenge. Players navigate through intricate tile layouts that push cognitive boundaries and test lightning-fast reflexes.
                     </p>
                     <p class="text-gray-700 leading-relaxed">
-                        In Tile Match, every level is a unique puzzle waiting to be conquered. Our innovative tile matching mechanics ensure that no two gaming sessions are alike, keeping players engaged and challenged. Whether you're a casual gamer or a puzzle enthusiast, Tile Match offers an unparalleled matching experience.
+                        Every level in Tile Match is a unique mental workout. Our innovative matching mechanics ensure an unpredictable and engaging experience that keeps your brain sharp and your reactions razor-quick.
                     </p>
                 </div>
                 <div>
                     <h2 class="text-3xl font-semibold text-blue-500 mb-4">Why Tile Match?</h2>
                     <ul class="space-y-2 text-gray-700">
-                        <li>✦ Unique Tile Matching Mechanics</li>
-                        <li>✦ Global Multiplayer Leaderboards</li>
+                        <li>✦ Revolutionary Matching Mechanics</li>
+                        <li>✦ Global Competitive Leaderboards</li>
                         <li>✦ Instant Online Matching</li>
                         <li>✦ Intuitive Touch & Click Controls</li>
                         <li>✦ Progressively Challenging Levels</li>
-                        <li>✦ Regular Tile Match Updates</li>
+                        <li>✦ Continuous Game Updates</li>
                     </ul>
                 </div>
             </section>
 
-            <section class="mb-12">
-                <h2 class="text-3xl font-semibold text-blue-500 mb-6 text-center">Master the Art of Tile Matching</h2>
+            <section id="how-to-play" class="mb-12">
+                <h2 class="text-3xl font-semibold text-blue-500 mb-6 text-center">Master Tile Matching</h2>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-white p-6 rounded-xl shadow-md">
-                        <h3 class="text-xl font-semibold text-blue-500 mb-3">1. Choose Your Tile Match Challenge</h3>
-                        <p class="text-gray-700">Select from multiple difficulty levels in Tile Match, tailored for every skill level.</p>
+                        <h3 class="text-xl font-semibold text-blue-500 mb-3">1. Choose Your Challenge</h3>
+                        <p class="text-gray-700">Select from multiple difficulty levels tailored to your skill.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-md">
-                        <h3 class="text-xl font-semibold text-blue-500 mb-3">2. Match Tiles with Lightning Speed</h3>
-                        <p class="text-gray-700">Rapidly identify and match corresponding tiles before time expires in Tile Match.</p>
+                        <h3 class="text-xl font-semibold text-blue-500 mb-3">2. Match at Lightning Speed</h3>
+                        <p class="text-gray-700">Rapidly identify and match corresponding tiles before time runs out.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-md">
-                        <h3 class="text-xl font-semibold text-blue-500 mb-3">3. Dominate Tile Match Leaderboards</h3>
-                        <p class="text-gray-700">Compete globally and track your Tile Match progress through challenging levels.</p>
+                        <h3 class="text-xl font-semibold text-blue-500 mb-3">3. Dominate Leaderboards</h3>
+                        <p class="text-gray-700">Compete globally and track your progression through challenging levels.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-white rounded-xl p-8 shadow-2xl mb-12">
-                <h2 class="text-3xl font-semibold text-blue-500 mb-6 text-center">The Science Behind Tile Match</h2>
+            <section id="science" class="bg-white rounded-xl p-8 shadow-2xl mb-12">
+                <h2 class="text-3xl font-semibold text-blue-500 mb-6 text-center">The Cognitive Science of Tile Match</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <h3 class="text-xl font-semibold text-blue-500 mb-3">Cognitive Enhancement</h3>
                         <p class="text-gray-700">
-                            Tile Match isn't just a game—it's a brain training platform. Improve pattern recognition, mental agility, and quick decision-making through engaging tile matching challenges.
+                            More than just a game, Tile Match is a cognitive training platform. Enhance pattern recognition, mental agility, and decision-making through engaging tile-matching challenges.
                         </p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-blue-500 mb-3">Global Tile Matching Community</h3>
+                        <h3 class="text-xl font-semibold text-blue-500 mb-3">Global Gaming Community</h3>
                         <p class="text-gray-700">
-                            Join a worldwide network of Tile Match players. Challenge friends, climb rankings, and experience the thrill of real-time multiplayer tile matching.
+                            Join a worldwide network of players. Challenge friends, climb rankings, and experience the thrill of real-time multiplayer tile matching.
                         </p>
                     </div>
                 </div>
+            </section>
+
+            <section class="text-center mb-12">
+                <a href="#game" class="inline-block bg-blue-600 text-white text-2xl font-bold px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg transform hover:scale-105">
+                    Start Playing Now
+                </a>
             </section>
         </main>
 
@@ -114,5 +167,21 @@
             <p>© 2025 Tile Match. All Rights Reserved.</p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
